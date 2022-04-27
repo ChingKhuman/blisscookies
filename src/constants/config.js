@@ -1,0 +1,1 @@
+export default config= 'https://cakes.manipur.ml/api/';
