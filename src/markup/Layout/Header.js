@@ -140,6 +140,8 @@ class Header extends Component{
 											
 										</ul>
 									</li>
+									<li><Link to={'/shop-cart'}>Cart</Link>
+									</li>
 								</ul>		
 							</div>
 						</div>

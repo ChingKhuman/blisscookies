@@ -7,6 +7,8 @@ import OurPartners from './../Element/OurPartners';
 import Slider from './../Element/Slider';
 import Accord from './../Element/Accord';
 
+
+
 //Images	
 var img1 = require('./../../images/background/bg5.jpg');
 var serblog1 = require('./../../images/our-services/cakeimg11.jpg');
@@ -45,12 +47,13 @@ class Index1 extends Component {
 	componentDidMount() {
 		fetch('https://cakes.manipur.ml/api/product/')
 			.then((resp) => resp.json())
-			.then((resp) => this.setState({ posts: resp }))
+			.then((resp) => this.setState({ posts: (resp) }))
 		//	.then(resp=>console.log(resp))
 	}
 
 
 	render() {
+		
 		return (
 			<>
 				<Header />
@@ -75,30 +78,20 @@ class Index1 extends Component {
 											</div>
 											<div className="item-info text-center">
 												<h4 className="item-title"><Link to={'/shop-product-details'}>{post.name}</Link></h4>
-												<Link to={'/shop-product-details'} className="btn btnhover">
+												<button> Add to Cart </button>
+											{/*}	<button onClick={() => handleAddToCart(post)}> Add to Cart</button> */}
+											
+											{/*	<Link to={'/shop-product-details'} className="btn btnhover">
 													<i className="ti-shopping-cart m-r5">
-													</i> Add To Cart</Link>
+													</i> Add To Cart</Link>4
+				*/}
 											</div>
 
 
 										</div>
 
 									</div>
-									<div className="col-lg-3 col-md-6 col-sm-6">
-									<div className="item-box shop-item">
-										<div className="item-img">
-											<img src={post.image} alt="" />
-											<span className="sale">Sale!</span>
-											<div className="price">
-												{post.price}
-											</div>
-										</div>
-										<div className="item-info text-center">
-											<h4 className="item-title"><Link to={'/shop-product-details'}>{post.name}</Link></h4>
-											<Link to={'/shop-product-details'} className="btn btnhover"><i className="ti-shopping-cart m-r5"></i> Add To Cart</Link>
-										</div>
-									</div>
-								</div>
+									
 								</div>
 							</div>
 
