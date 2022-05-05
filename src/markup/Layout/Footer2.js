@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import React from 'react'
 
-class Footer2 extends Component{
-	render(){
-		return(
-			<footer className="site-footer pizza-footer">
+const Footer2 = () => {
+  return (
+	<>
+		<footer className="site-footer pizza-footer">
 				<div className="p-tb60 text-center bg-black-1">
 					<div className="container">
 						<div className="row">
@@ -32,9 +32,11 @@ class Footer2 extends Component{
 					</div>
 				</div>
 			</footer>
-		)
-	}
 
+	</>
+  )
 }
 
 export default Footer2;
+
+
